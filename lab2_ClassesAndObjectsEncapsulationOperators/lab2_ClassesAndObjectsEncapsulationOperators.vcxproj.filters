@@ -13,10 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Exercise1">
+      <UniqueIdentifier>{9b6fbbe3-0172-470d-9c02-ad22f2da68e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1">
+      <UniqueIdentifier>{2f4e8389-7cb1-4cf1-b5a4-fe10a007695c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise2">
+      <UniqueIdentifier>{b9976668-6741-4dca-926d-5a8d01313892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise3">
+      <UniqueIdentifier>{d9c72931-a335-497f-a8f3-2e93961d9d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{d959676f-b213-4590-825e-03c071a8db59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise3">
+      <UniqueIdentifier>{9ce25c6b-3cf4-4cef-8563-2a4fd43dc0d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab2_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
