@@ -1,5 +1,9 @@
 ﻿#include "Vector.h"
+#include "Fraction.h"
 #include <stdio.h>
+#include <iomanip> 
+#include <sstream>
+#include <iostream>
 
 void Exercise1() {
 	Vector* vec = new Vector(18);
@@ -24,6 +28,32 @@ void Exercise1() {
 	(--mat).print();
 }
 
+void Exercise2() {
+
+	//number of didgets after point
+	double number = 3.1459265;
+	std::stringstream ss;
+	ss << std::setprecision(15) << number;
+	std::string strNum = ss.str();
+	size_t pos = strNum.find('.');
+	if (pos != strNum.npos)
+		std::cout << "Number of digits after comma: " << strNum.size() - 1 - pos << std::endl;
+	else
+		std::cout << "Comma not found!" << std::endl;
+
+
+
+
+
+
+	Fraction x(5.0);
+	Fraction y(10.0);
+	printf("\n%.2f", (x + y).value);
+	printf("\n%.2f", (x - y).value);
+	printf("\n%.2f", (x * y).value);
+	printf("\n%.2f", (x / y).value);
+}
+
 int main() {
 	/*
 	Написать классы Vector и Matrix для хранения и обработки одномерных и
@@ -40,7 +70,26 @@ int main() {
 	постфиксного).Смысл инкремента / декремента всего массива заключается в
 	инкременте / декременте каждого элемента массива.
 	*/
-	Exercise1();
+	//Exercise1();
+
+	/*
+	Написать класс Fraction для представления обыкновенных дробей(как отношения
+	двух целых чисел x / y).Перегрузить операторы + , -, *, / для дробей.Реализовать метод
+	void reduce() для сокращения дроби, а также статические методы :
+	- int gcd(int n, int m)
+	функция для нахождения наибольшего общего делителя чисел n и m;
+	- void printAsFraction(double decimal_fraction)
+	- void printAsFraction(char* decimal_fraction)
+	перегруженные методы вывода десятичной дроби в виде обыкновенной
+	(например, при значении decimal_fraction = 0.43 на экране должно
+		вывестись 43 / 100, при 0.25 – 1 / 4 и т.д.).
+	Также реализовать в виде статического члена класса счетчик всех созданных на
+	данный момент в программе экземпляров дробей.
+	Продемонстрировать работу созданного класса.Создать несколько объектов дробей.
+	Произвести операции сложения, вычитания, умножения и деления дробей.Вывести
+	на экран результаты.Показать также результаты работы статических методов класса.
+	*/
+	Exercise2();
 
 	return 0;
 }
