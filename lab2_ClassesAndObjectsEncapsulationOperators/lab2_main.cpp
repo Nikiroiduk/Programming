@@ -14,7 +14,14 @@ void Exercise1() {
 	(*vec).print();
 	(*vec)++;
 	(*vec).print();
-	delete vec;
+	Matrix mat = (*vec).convertToMatrix(2, 9);
+	mat.print();
+	mat++;
+	mat.print();
+	mat--;
+	mat.print();
+	(++mat).print();
+	(--mat).print();
 }
 
 int main() {

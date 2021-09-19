@@ -1,14 +1,23 @@
 #include "Vector.h"
 #include <cmath>
 #include <stdio.h>
+#include "Matrix.h"
 
 Vector::Vector(int length)
 {
 	this->length = length;
 	array = new int[length];
+	initializeArray();
+}
+
+void Vector::initializeArray() {
 	for (int i = 0; i < length; i++) {
 		*(array + i) = ((i + 1) % 2 == 0 ? -(pow(i, 2) + 1) : pow(i, 2) + 1);
 	}
+}
+
+Matrix Vector::convertToMatrix(int width, int height) {
+	return Matrix(array, width, height);
 }
 
 void Vector::sort() {
