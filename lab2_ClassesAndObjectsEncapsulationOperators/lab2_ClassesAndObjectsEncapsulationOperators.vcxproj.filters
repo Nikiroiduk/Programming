@@ -45,6 +45,9 @@
     <ClCompile Include="Fraction.cpp">
       <Filter>Source Files\Exercise2</Filter>
     </ClCompile>
+    <ClCompile Include="Сonditioner.cpp">
+      <Filter>Source Files\Exercise3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h">
@@ -55,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Fraction.h">
       <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="Сonditioner.h">
+      <Filter>Header Files\Exercise3</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,8 +4,11 @@
 #include <iomanip> 
 #include <sstream>
 #include <iostream>
+#include <numeric>
 
 void Exercise1() {
+	printf("Exercise 1\n");
+
 	Vector* vec = new Vector(18);
 	(*vec).print();
 	(*vec).sort();
@@ -28,30 +31,53 @@ void Exercise1() {
 	(--mat).print();
 }
 
+	int	Fraction::counter = 0;
 void Exercise2() {
-
-	//number of didgets after point
-	double number = 3.1459265;
-	std::stringstream ss;
-	ss << std::setprecision(15) << number;
-	std::string strNum = ss.str();
-	size_t pos = strNum.find('.');
-	if (pos != strNum.npos)
-		std::cout << "Number of digits after comma: " << strNum.size() - 1 - pos << std::endl;
-	else
-		std::cout << "Comma not found!" << std::endl;
+	printf("\n\nExercise 2");
 
 
+	Fraction x(0.05);
+	Fraction y(.2);
+	Fraction a(.0004);
+	Fraction b(10.05);
 
+	y.reduce();					// 1/5
+	a.reduce();					// 1/2500
+	b.reduce();					// 10 1/20
 
+	x.printAsFraction(2.3231);  // 2 3231/10000 ???
+	x.printAsFraction();		// 5/100
+	x.reduce();
+	x.printAsFraction();		// 1/20
 
+	char t[] = "3.14";
+	x.printAsFraction(t);		//3 14/100 ???
 
-	Fraction x(5.0);
-	Fraction y(10.0);
-	printf("\n%.2f", (x + y).value);
-	printf("\n%.2f", (x - y).value);
-	printf("\n%.2f", (x * y).value);
-	printf("\n%.2f", (x / y).value);
+	Fraction d = (x + y);
+	d.printAsFraction();		// 25/100
+	d.reduce();
+	d.printAsFraction();		// 1/4
+
+	Fraction e = (x - y);
+	e.printAsFraction();		// -15/100
+	e.reduce();
+	e.printAsFraction();		// 3/-20
+
+	Fraction i = (x * y);
+	i.printAsFraction();		// 1/100
+	i.reduce();
+	i.printAsFraction();		// 1/100
+
+	Fraction h = (x / y);
+	h.printAsFraction();		// 25/100
+	h.reduce();
+	h.printAsFraction();		// 1/4
+
+	printf("\n\nAmountOfElements Fraction: %d", Fraction::counter);
+}
+
+void Exercise3() {
+
 }
 
 int main() {
@@ -90,6 +116,28 @@ int main() {
 	на экран результаты.Показать также результаты работы статических методов класса.
 	*/
 	Exercise2();
+
+	/*
+	Написать собственный класс, в соответствии с вариантом.Продемонстрировать в коде
+	инкапсуляцию данных, применение конструкторов без параметров и с параметрами
+	для инициализации данных.Класс должен содержать метод serialize() для
+	сохранения данных класса в файл и метод deserialize() для чтения данных класса
+	из файла по умолчанию в текущей директории, а также перегруженные методы
+	serialize(const std::string & filename) и deserialize(const std::string &
+	filename) для работы с файлом с указанным в параметре именем.
+
+	Вариант №5
+	Класс КОНДИЦИОНЕР.
+	Данные: фирма, модель, вес, температура, режим, год выпуска.
+	Создать 2 кондиционера в куче и проинициализировать их с помощью конструкторов с
+	параметрами. Еще один кондиционер создать отдельно в стеке и установить его данные
+	с помощью сеттеров. В главной функции проимитировать настройку кондиционеров
+	персоналом помещений – установить каждому режим; если выбран режим охлаждения,
+	то установить также температуру. Проделать эту процедуру три раза. Вывести
+	информацию об использовании кондиционеров – режим, в котором на данный момент
+	работает техника, среднее изменение температуры за весь период настройки.
+	*/
+	//Exercise3();
 
 	return 0;
 }
