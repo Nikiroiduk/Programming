@@ -1,6 +1,7 @@
 #pragma once
+
 #include <string>
-class Ñonditioner
+class Conditioner    
 {
 private:
 	double tempSum = 0;
@@ -12,8 +13,8 @@ private:
 	bool state; // 1-heating 0-chilling
 	std::string releaseYear;
 public:
-	Ñonditioner();
-	Ñonditioner(std::string firm,
+	Conditioner();
+	Conditioner(std::string firm,
 				std::string model,
 				double mass,
 				double temp,

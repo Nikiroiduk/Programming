@@ -78,10 +78,10 @@ void Exercise2() {
 }
 
 void Exercise3() {
-	Сonditioner* conditionerHeap_1 = new Сonditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
-	Сonditioner* conditionerHeap_2 = new Сonditioner("Bombass", "ASdk", 88, 31, 1, "1997");
+	Conditioner* conditionerHeap_1 = new Conditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
+	Conditioner* conditionerHeap_2 = new Conditioner("Bombass", "ASdk", 88, 31, 1, "1997");
 
-	Сonditioner conditionerStack;
+	Conditioner conditionerStack;
 	conditionerStack.setFirm("Nord");
 	conditionerStack.setMass(50);
 	conditionerStack.setModel("DBL_44");
@@ -128,7 +128,7 @@ int main() {
 	постфиксного).Смысл инкремента / декремента всего массива заключается в
 	инкременте / декременте каждого элемента массива.
 	*/
-	//Exercise1();
+	Exercise1();
 
 	/*
 	Написать класс Fraction для представления обыкновенных дробей(как отношения
@@ -147,7 +147,7 @@ int main() {
 	Произвести операции сложения, вычитания, умножения и деления дробей.Вывести
 	на экран результаты.Показать также результаты работы статических методов класса.
 	*/
-	//Exercise2();
+	Exercise2();
 
 	/*
 	Написать собственный класс, в соответствии с вариантом.Продемонстрировать в коде
