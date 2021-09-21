@@ -4,7 +4,7 @@
 Ñonditioner::Ñonditioner(std::string firm,
 						 std::string model,
 						 double mass,
-						 double temp,
+						 double temp, 
 						 bool state,
 						 std::string releaseYaer) {
 	this->firm = firm;
