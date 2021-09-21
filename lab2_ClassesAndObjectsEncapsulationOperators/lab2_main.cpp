@@ -1,6 +1,5 @@
 ﻿#include "Vector.h"
 #include "Fraction.h"
-#include "Сonditioner.h"
 #include <stdio.h>
 #include <iomanip> 
 #include <sstream>
@@ -32,7 +31,7 @@ void Exercise1() {
 	(--mat).print();
 }
 
-int	Fraction::counter = 0;
+	int	Fraction::counter = 0;
 void Exercise2() {
 	printf("\n\nExercise 2");
 
@@ -78,38 +77,7 @@ void Exercise2() {
 }
 
 void Exercise3() {
-	Сonditioner* conditionerHeap_1 = new Сonditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
-	Сonditioner* conditionerHeap_2 = new Сonditioner("Bombass", "ASdk", 88, 31, 1, "1997");
 
-	Сonditioner conditionerStack;
-	conditionerStack.setFirm("Nord");
-	conditionerStack.setMass(50);
-	conditionerStack.setModel("DBL_44");
-	conditionerStack.setReleaseYear("2008");
-	conditionerStack.setState(1);
-	conditionerStack.setTemp(30);
-
-
-	conditionerHeap_1->printState();
-	conditionerHeap_2->printState();
-	conditionerStack.printState();
-
-	conditionerHeap_1->mode(1, 31);
-	conditionerHeap_1->mode(1, 29);
-	conditionerHeap_1->mode(0, 22);
-	conditionerHeap_1->mode(0, 20);
-	conditionerHeap_1->printState();
-
-	conditionerHeap_1->serialize();
-	conditionerHeap_1->deserialize();
-
-
-	conditionerHeap_1->serialize("test.txt");
-	conditionerHeap_1->deserialize("test.txt");
-
-	//Strange error here is
-	//delete conditionerHeap_1;
-	//delete conditionerHeap_2;
 }
 
 int main() {
@@ -147,7 +115,7 @@ int main() {
 	Произвести операции сложения, вычитания, умножения и деления дробей.Вывести
 	на экран результаты.Показать также результаты работы статических методов класса.
 	*/
-	//Exercise2();
+	Exercise2();
 
 	/*
 	Написать собственный класс, в соответствии с вариантом.Продемонстрировать в коде
@@ -169,7 +137,7 @@ int main() {
 	информацию об использовании кондиционеров – режим, в котором на данный момент
 	работает техника, среднее изменение температуры за весь период настройки.
 	*/
-	Exercise3();
+	//Exercise3();
 
 	return 0;
 }
