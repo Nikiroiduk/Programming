@@ -1,11 +1,7 @@
 ﻿#include "Vector.h"
 #include "Fraction.h"
-#include "Сonditioner.h"
+#include "Conditioner.h"
 #include <stdio.h>
-#include <iomanip> 
-#include <sstream>
-#include <iostream>
-#include <numeric>
 
 void Exercise1() {
 	printf("Exercise 1\n");
@@ -78,6 +74,7 @@ void Exercise2() {
 }
 
 void Exercise3() {
+	printf("\n\nExercise 3\n");
 	Conditioner* conditionerHeap_1 = new Conditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
 	Conditioner* conditionerHeap_2 = new Conditioner("Bombass", "ASdk", 88, 31, 1, "1997");
 
@@ -107,7 +104,7 @@ void Exercise3() {
 	conditionerHeap_1->serialize("test.txt");
 	conditionerHeap_1->deserialize("test.txt");
 
-	//Strange error here is
+	//Dont work with delete
 	//delete conditionerHeap_1;
 	//delete conditionerHeap_2;
 }

@@ -1,4 +1,4 @@
-#include "Ñonditioner.h"
+#include "Conditioner.h"
 #include <fstream>
 Conditioner::Conditioner() {}
 Conditioner::Conditioner(std::string firm,

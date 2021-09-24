@@ -59,44 +59,18 @@ int Fraction::getNumberOfDecimalPlaces(double value) {
 }
 
 void Fraction::printAsFraction(double decimalFraction) {
-	///Какой в этом смысл?! Зачем тогда класс?
-
-	// STATIC
 	Fraction a = Fraction::Fraction(decimalFraction);
 	a.reduce();
 	a.printAsFraction();
-
-
-	// !STATIC
-
-	//int numberOfDecimalPlaces = getNumberOfDecimalPlaces(decimalFraction);
-	//double wholeFraction;
-	//int numerator = fractionalPartToInt(decimalFraction, &wholeFraction, numberOfDecimalPlaces);
-	//int denominator = (int)(pow(10, numberOfDecimalPlaces));
-
-	//printf("\n\n%.0f %d/%d", wholeFraction, numerator, denominator);
 }
 
 void Fraction::printAsFraction(char* decimalFraction) {
 	std::string str(decimalFraction);
 	double decimalNumber = std::stod(str);
 
-
-	// STATIC
 	Fraction a = Fraction::Fraction(decimalNumber);
 	a.reduce();
 	a.printAsFraction();
-
-
-
-	// !STATIC
-
-	/*int numberOfDecimalPlaces = getNumberOfDecimalPlaces(decimalNumber);
-	double wholeFraction;
-	int numerator = fractionalPartToInt(decimalNumber, &wholeFraction, numberOfDecimalPlaces);
-	int denominator = (int)(pow(10, numberOfDecimalPlaces));
-
-	printf("\n\n%.0f %d/%d", wholeFraction, numerator, denominator);*/
 }
 
 void Fraction::printAsFraction(Fraction fraction) {

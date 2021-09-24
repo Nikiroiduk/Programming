@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab1_MemoryManagment", "lab
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab2_ClassesAndObjectsEncapsulationOperators", "lab2_ClassesAndObjectsEncapsulationOperators\lab2_ClassesAndObjectsEncapsulationOperators.vcxproj", "{1407C3A2-8341-4DAB-8C66-6825E7BBB192}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab3_InheritancePolymorphismInterfaces", "lab3_InheritancePolymorphismInterfaces\lab3_InheritancePolymorphismInterfaces.vcxproj", "{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{1407C3A2-8341-4DAB-8C66-6825E7BBB192}.Release|x64.Build.0 = Release|x64
 		{1407C3A2-8341-4DAB-8C66-6825E7BBB192}.Release|x86.ActiveCfg = Release|Win32
 		{1407C3A2-8341-4DAB-8C66-6825E7BBB192}.Release|x86.Build.0 = Release|Win32
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Debug|x64.ActiveCfg = Debug|x64
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Debug|x64.Build.0 = Debug|x64
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Debug|x86.ActiveCfg = Debug|Win32
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Debug|x86.Build.0 = Debug|Win32
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Release|x64.ActiveCfg = Release|x64
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Release|x64.Build.0 = Release|x64
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Release|x86.ActiveCfg = Release|Win32
+		{E0B90C94-9370-42DF-9DC6-D0DBD5ACD410}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
