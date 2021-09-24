@@ -1,8 +1,4 @@
 #pragma once
-<<<<<<< HEAD:lab2_ClassesAndObjectsEncapsulationOperators/Ð¡onditioner.h
-class Ñonditioner
-{
-=======
 
 #include <string>
 class Conditioner    
@@ -36,6 +32,5 @@ public:
 	void deserialize();
 	void serialize(const std::string& filename) const;
 	void deserialize(const std::string& filename);
->>>>>>> NewWorld:lab2_ClassesAndObjectsEncapsulationOperators/Conditioner.h
 };
 

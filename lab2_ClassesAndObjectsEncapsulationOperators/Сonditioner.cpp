@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#include "Ñonditioner.h"
-=======
 #include "Conditioner.h"
 #include <fstream>
 Conditioner::Conditioner() {}
@@ -59,7 +56,7 @@ void Conditioner::printState() {
 
 void Conditioner::serialize() {
 	std::ofstream stream;
-	stream.open("Ñonditioner.txt", std::ofstream::app);
+	stream.open("ï¿½onditioner.txt", std::ofstream::app);
 
 	if (stream.is_open()) {
 		printf("\nFile is open for writing");
@@ -74,7 +71,7 @@ void Conditioner::serialize() {
 
 void Conditioner::deserialize() {
 	std::ifstream stream;
-	stream.open("Ñonditioner.txt");
+	stream.open("ï¿½onditioner.txt");
 
 	if (stream.is_open()) {
 		printf("\nFile is open for reading");
@@ -116,4 +113,3 @@ void Conditioner::deserialize(const std::string& filename) {
 
 	stream.close();
 }
->>>>>>> NewWorld

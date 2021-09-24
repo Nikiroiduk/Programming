@@ -1,9 +1,6 @@
 ﻿#include "Vector.h"
 #include "Fraction.h"
-<<<<<<< HEAD
-=======
 #include "Conditioner.h"
->>>>>>> NewWorld
 #include <stdio.h>
 
 void Exercise1() {
@@ -77,9 +74,6 @@ void Exercise2() {
 }
 
 void Exercise3() {
-<<<<<<< HEAD
-
-=======
 	printf("\n\nExercise 3\n");
 	Conditioner* conditionerHeap_1 = new Conditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
 	Conditioner* conditionerHeap_2 = new Conditioner("Bombass", "ASdk", 88, 31, 1, "1997");
@@ -113,7 +107,6 @@ void Exercise3() {
 	//Dont work with delete
 	//delete conditionerHeap_1;
 	//delete conditionerHeap_2;
->>>>>>> NewWorld
 }
 
 int main() {
