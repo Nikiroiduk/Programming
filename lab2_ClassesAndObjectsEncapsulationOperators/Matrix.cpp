@@ -11,7 +11,7 @@ Matrix::Matrix(int width, int height) {
 }
 
 Matrix::Matrix(int* array1D, int width, int height) {
-	//copy paste!!!
+	//copy paste from ctr!!!
 	this->width = width;
 	this->height = height;
 

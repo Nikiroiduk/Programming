@@ -59,7 +59,7 @@
     <ClInclude Include="Fraction.h">
       <Filter>Header Files\Exercise2</Filter>
     </ClInclude>
-    <ClInclude Include="Сonditioner.h">
+    <ClInclude Include="Conditioner.h">
       <Filter>Header Files\Exercise3</Filter>
     </ClInclude>
   </ItemGroup>

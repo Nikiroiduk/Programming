@@ -1,10 +1,10 @@
 ﻿#include "Vector.h"
 #include "Fraction.h"
+<<<<<<< HEAD
+=======
+#include "Conditioner.h"
+>>>>>>> NewWorld
 #include <stdio.h>
-#include <iomanip> 
-#include <sstream>
-#include <iostream>
-#include <numeric>
 
 void Exercise1() {
 	printf("Exercise 1\n");
@@ -77,7 +77,43 @@ void Exercise2() {
 }
 
 void Exercise3() {
+<<<<<<< HEAD
 
+=======
+	printf("\n\nExercise 3\n");
+	Conditioner* conditionerHeap_1 = new Conditioner("Nord", "DBL_2875", 50, 21, 0, "2007");
+	Conditioner* conditionerHeap_2 = new Conditioner("Bombass", "ASdk", 88, 31, 1, "1997");
+
+	Conditioner conditionerStack;
+	conditionerStack.setFirm("Nord");
+	conditionerStack.setMass(50);
+	conditionerStack.setModel("DBL_44");
+	conditionerStack.setReleaseYear("2008");
+	conditionerStack.setState(1);
+	conditionerStack.setTemp(30);
+
+
+	conditionerHeap_1->printState();
+	conditionerHeap_2->printState();
+	conditionerStack.printState();
+
+	conditionerHeap_1->mode(1, 31);
+	conditionerHeap_1->mode(1, 29);
+	conditionerHeap_1->mode(0, 22);
+	conditionerHeap_1->mode(0, 20);
+	conditionerHeap_1->printState();
+
+	conditionerHeap_1->serialize();
+	conditionerHeap_1->deserialize();
+
+
+	conditionerHeap_1->serialize("test.txt");
+	conditionerHeap_1->deserialize("test.txt");
+
+	//Dont work with delete
+	//delete conditionerHeap_1;
+	//delete conditionerHeap_2;
+>>>>>>> NewWorld
 }
 
 int main() {
@@ -96,7 +132,7 @@ int main() {
 	постфиксного).Смысл инкремента / декремента всего массива заключается в
 	инкременте / декременте каждого элемента массива.
 	*/
-	//Exercise1();
+	Exercise1();
 
 	/*
 	Написать класс Fraction для представления обыкновенных дробей(как отношения
