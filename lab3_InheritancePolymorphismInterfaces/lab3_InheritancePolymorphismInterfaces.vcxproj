@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExpressionEvaluator.cpp" />
+    <ClCompile Include="ILoggable.cpp" />
     <ClCompile Include="lab3_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExpressionEvaluator.h" />
+    <ClInclude Include="ILoggable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

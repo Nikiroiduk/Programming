@@ -13,10 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Exercise1">
+      <UniqueIdentifier>{d44bc03e-fd89-4a66-88e6-54e8cd95657e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1">
+      <UniqueIdentifier>{32c0d1dc-90c0-4fe0-9414-7662c902578e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab3_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ILoggable.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionEvaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExpressionEvaluator.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="ILoggable.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
