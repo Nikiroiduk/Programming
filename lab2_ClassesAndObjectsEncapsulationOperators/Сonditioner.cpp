@@ -113,3 +113,5 @@ void Conditioner::deserialize(const std::string& filename) {
 
 	stream.close();
 }
+
+Conditioner::~Conditioner() {}

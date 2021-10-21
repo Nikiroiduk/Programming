@@ -42,13 +42,13 @@ void Exercise2() {
 	a.reduce();					// 1/2500
 	b.reduce();					// 10 1/20
 
-	x.printAsFraction(2.3231);  // 2 3231/10000 ???
+	x.printAsFraction(2.3231);  // 2 3231/10000
 	x.printAsFraction();		// 5/100
 	x.reduce();
 	x.printAsFraction();		// 1/20
 
 	char t[] = "3.14";
-	x.printAsFraction(t);		//3 14/100 ???
+	x.printAsFraction(t);		//3 14/100
 
 	Fraction d = (x + y);
 	d.printAsFraction();		// 25/100
@@ -104,9 +104,8 @@ void Exercise3() {
 	conditionerHeap_1->serialize("test.txt");
 	conditionerHeap_1->deserialize("test.txt");
 
-	//Dont work with delete
-	//delete conditionerHeap_1;
-	//delete conditionerHeap_2;
+	delete conditionerHeap_1;
+	delete conditionerHeap_2;
 }
 
 int main() {
@@ -166,7 +165,7 @@ int main() {
 	информацию об использовании кондиционеров – режим, в котором на данный момент
 	работает техника, среднее изменение температуры за весь период настройки.
 	*/
-	//Exercise3();
+	Exercise3();
 
 	return 0;
 }

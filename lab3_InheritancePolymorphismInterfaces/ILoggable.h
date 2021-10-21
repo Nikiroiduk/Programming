@@ -2,7 +2,9 @@
 #include <string>
 class ILoggable
 {
+protected:
+	virtual ~ILoggable() {}
 public:
-	virtual void logToScreen();
-	virtual void logToFile(const std::string& filename);
+	virtual void logToScreen() const = 0;
+	virtual void logToFile(const std::string& filename) const = 0;
 };

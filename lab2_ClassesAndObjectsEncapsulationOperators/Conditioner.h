@@ -32,5 +32,6 @@ public:
 	void deserialize();
 	void serialize(const std::string& filename) const;
 	void deserialize(const std::string& filename);
+	~Conditioner();
 };
 

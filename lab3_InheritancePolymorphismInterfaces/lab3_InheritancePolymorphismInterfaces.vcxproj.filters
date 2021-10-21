@@ -19,24 +19,57 @@
     <Filter Include="Source Files\Exercise1">
       <UniqueIdentifier>{32c0d1dc-90c0-4fe0-9414-7662c902578e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Exercise1\Interface">
+      <UniqueIdentifier>{8af6efa5-56dc-41e8-a19d-cff6e34e93db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab3_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ILoggable.cpp">
+    <ClCompile Include="ExpressionEvaluator.cpp">
       <Filter>Source Files\Exercise1</Filter>
     </ClCompile>
-    <ClCompile Include="ExpressionEvaluator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Divisor.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="Multiplier.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="Subtractor.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="Summator.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomExpressionsEvaluator.cpp">
+      <Filter>Source Files\Exercise1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExpressionEvaluator.h">
       <Filter>Header Files\Exercise1</Filter>
     </ClInclude>
-    <ClInclude Include="ILoggable.h">
+    <ClInclude Include="Divisor.h">
       <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="Multiplier.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="Subtractor.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="Summator.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomExpressionsEvaluator.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="ILoggable.h">
+      <Filter>Header Files\Exercise1\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IShuffle.h">
+      <Filter>Header Files\Exercise1\Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

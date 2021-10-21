@@ -139,13 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CustomExpressionsEvaluator.cpp" />
+    <ClCompile Include="Divisor.cpp" />
     <ClCompile Include="ExpressionEvaluator.cpp" />
-    <ClCompile Include="ILoggable.cpp" />
     <ClCompile Include="lab3_main.cpp" />
+    <ClCompile Include="Multiplier.cpp" />
+    <ClCompile Include="Subtractor.cpp" />
+    <ClCompile Include="Summator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomExpressionsEvaluator.h" />
+    <ClInclude Include="Divisor.h" />
     <ClInclude Include="ExpressionEvaluator.h" />
     <ClInclude Include="ILoggable.h" />
+    <ClInclude Include="IShuffle.h" />
+    <ClInclude Include="Multiplier.h" />
+    <ClInclude Include="Subtractor.h" />
+    <ClInclude Include="Summator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
