@@ -10,7 +10,16 @@ Multiplier::Multiplier(int numOfOperands) :
 	symbol = '*';
 }
 
+bool Multiplier::containZeros() {
+	for (int i = 0; i < numOfOperands; ++i) {
+		if (operands[i] == 0) return true;
+	}
+	return false;
+}
+
 double Multiplier::calculate() {
+	if (containZeros()) return 0;
+
 	double result = operands[0];
 
 	for (int i = 1; i < numOfOperands; ++i) {

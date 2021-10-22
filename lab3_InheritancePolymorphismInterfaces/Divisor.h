@@ -9,5 +9,6 @@ public:
 	double calculate() override;
 	void shuffle() override;
 	void shuffle(size_t i, size_t j) override;
+	bool containZeros();
 };
 

@@ -56,7 +56,7 @@ void Conditioner::printState() {
 
 void Conditioner::serialize() {
 	std::ofstream stream;
-	stream.open("�onditioner.txt", std::ofstream::app);
+	stream.open("Conditioner.txt", std::ofstream::app);
 
 	if (stream.is_open()) {
 		printf("\nFile is open for writing");
@@ -71,7 +71,7 @@ void Conditioner::serialize() {
 
 void Conditioner::deserialize() {
 	std::ifstream stream;
-	stream.open("�onditioner.txt");
+	stream.open("Conditioner.txt");
 
 	if (stream.is_open()) {
 		printf("\nFile is open for reading");

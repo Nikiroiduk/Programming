@@ -6,5 +6,6 @@ public:
 	Multiplier();
 	Multiplier(int numOfOperands);
 	double calculate() override;
+	bool containZeros();
 };
 
