@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Exercise1\Interface">
       <UniqueIdentifier>{8af6efa5-56dc-41e8-a19d-cff6e34e93db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{a017b6db-0d0e-450c-82e2-c72e063232a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise2">
+      <UniqueIdentifier>{00d1d900-f576-4e0d-bb9a-2817cac2382c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab3_main.cpp">
@@ -44,6 +50,15 @@
     </ClCompile>
     <ClCompile Include="CustomExpressionsEvaluator.cpp">
       <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
+    <ClCompile Include="Conditioner.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="HouseholdDevice.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="Heater.cpp">
+      <Filter>Source Files\Exercise2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +85,18 @@
     </ClInclude>
     <ClInclude Include="IShuffle.h">
       <Filter>Header Files\Exercise1\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IControllable.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditioner.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="HouseholdDevice.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="Heater.h">
+      <Filter>Header Files\Exercise2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

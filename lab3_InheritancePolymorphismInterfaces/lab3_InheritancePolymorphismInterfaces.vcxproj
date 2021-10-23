@@ -139,18 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Conditioner.cpp" />
     <ClCompile Include="CustomExpressionsEvaluator.cpp" />
     <ClCompile Include="Divisor.cpp" />
     <ClCompile Include="ExpressionEvaluator.cpp" />
+    <ClCompile Include="Heater.cpp" />
+    <ClCompile Include="HouseholdDevice.cpp" />
     <ClCompile Include="lab3_main.cpp" />
     <ClCompile Include="Multiplier.cpp" />
     <ClCompile Include="Subtractor.cpp" />
     <ClCompile Include="Summator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Conditioner.h" />
     <ClInclude Include="CustomExpressionsEvaluator.h" />
     <ClInclude Include="Divisor.h" />
     <ClInclude Include="ExpressionEvaluator.h" />
+    <ClInclude Include="Heater.h" />
+    <ClInclude Include="HouseholdDevice.h" />
+    <ClInclude Include="IControllable.h" />
     <ClInclude Include="ILoggable.h" />
     <ClInclude Include="IShuffle.h" />
     <ClInclude Include="Multiplier.h" />
