@@ -41,8 +41,9 @@ void HouseholdDevice::printState() {
 }
 
 void HouseholdDevice::serialize() {
+	std::string fileName = firm + model + ".txt";
 	std::ofstream stream;
-	stream.open(firm + model + ".txt", std::ofstream::app);
+	stream.open(fileName);
 
 	if (stream.is_open()) {
 		printf("\nFile is open for writing");
@@ -56,8 +57,9 @@ void HouseholdDevice::serialize() {
 }
 
 void HouseholdDevice::deserialize() {
+	std::string fileName = firm + model + ".txt";
 	std::ifstream stream;
-	stream.open(firm + model + ".txt");
+	stream.open(fileName);
 
 	if (stream.is_open()) {
 		printf("\nFile is open for reading");
@@ -72,7 +74,7 @@ void HouseholdDevice::deserialize() {
 
 void HouseholdDevice::serialize(const string& filename) const {
 	std::ofstream stream;
-	stream.open(filename, std::ofstream::app);
+	stream.open(filename);
 
 	if (stream.is_open()) {
 		printf("\nFile is open for writing");
@@ -86,6 +88,7 @@ void HouseholdDevice::serialize(const string& filename) const {
 }
 
 void HouseholdDevice::deserialize(const string& filename) {
+
 	std::ifstream stream;
 	stream.open(filename);
 

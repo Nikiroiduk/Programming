@@ -108,6 +108,9 @@ void Exercise2() {
 	devices[0]->printState();
 	devices[0]->serialize();
 	devices[0]->deserialize();
+	devices[0]->printState();
+	dynamic_cast<Conditioner*>(devices[0])->control(11);
+	devices[0]->printState();
 	
 	printf("\n\n=====Conditioner 2=====");
 	devices[1] = new Conditioner();
@@ -128,13 +131,9 @@ void Exercise2() {
 	dynamic_cast<Heater*>(devices[2])->control(50);
 	devices[2]->printState();
 
-	//Something went wrong... again
-	//Exactly the same construction in the first exercise works fine ¯\_(ツ)_/¯
 	for (int i = 0; i < numberOfDevices; ++i) {
 		delete devices[i];
 	}
-	printf("I am an output that will never happen ):");
-
 }				  
 
 int main() {
