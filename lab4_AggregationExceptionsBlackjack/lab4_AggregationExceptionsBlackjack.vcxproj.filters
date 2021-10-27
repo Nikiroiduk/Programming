@@ -13,5 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Exercise1">
+      <UniqueIdentifier>{e5d5c9df-2395-4113-9353-905a5fe6d68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{bae1d3e7-89b8-4025-bcfc-dbce6f17bc56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lab4_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Header Files\Exercise1</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
