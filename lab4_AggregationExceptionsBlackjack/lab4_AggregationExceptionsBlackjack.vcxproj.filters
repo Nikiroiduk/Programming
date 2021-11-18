@@ -16,8 +16,26 @@
     <Filter Include="Header Files\Exercise1">
       <UniqueIdentifier>{e5d5c9df-2395-4113-9353-905a5fe6d68c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Exercise2">
+    <Filter Include="Header Files\Exercise1\Model">
+      <UniqueIdentifier>{2c353578-2d13-458d-b259-9e65ac0e1f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise1\View">
+      <UniqueIdentifier>{5f8cc1d7-0846-491c-8ea6-a34437f24f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise1\Controller">
+      <UniqueIdentifier>{d3512abe-c827-4a8f-bbf4-173510db3474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1">
       <UniqueIdentifier>{bae1d3e7-89b8-4025-bcfc-dbce6f17bc56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\Model">
+      <UniqueIdentifier>{dc0f56a5-9ae5-4068-987f-6545d9f39299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\View">
+      <UniqueIdentifier>{aa836f37-d0d4-45f2-9f17-b570111a6a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\Controller">
+      <UniqueIdentifier>{952b50be-4967-453f-a5b8-3405fbdead77}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,18 +43,45 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Card.cpp">
-      <Filter>Source Files\Exercise2</Filter>
+      <Filter>Source Files\Exercise1\Model</Filter>
     </ClCompile>
     <ClCompile Include="Deck.cpp">
-      <Filter>Source Files\Exercise2</Filter>
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Source Files\Exercise1\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleView.cpp">
+      <Filter>Source Files\Exercise1\View</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IPrintable.h">
       <Filter>Header Files\Exercise1</Filter>
     </ClInclude>
     <ClInclude Include="Deck.h">
-      <Filter>Header Files\Exercise1</Filter>
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Header Files\Exercise1\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleView.h">
+      <Filter>Header Files\Exercise1\View</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,21 +2,19 @@
 #include <io.h>
 #include <fcntl.h>
 
+using std::cout;
+using std::wcout;
 Card::Card(int rank, int suit) {
-	this->suit = suit;
-	this->rank = rank;
-	this->value = getCardValue();
+	_suit = suit;
+	_rank = rank;
+	_value = getCardValue();
 }
 
 int Card::getCardValue() {
-	switch (rank)
+	switch (_rank)
 	{
 	case jack:
-		return 10;
-		break;
 	case queen:
-		return 10;
-		break;
 	case king:
 		return 10;
 		break;
@@ -24,45 +22,47 @@ int Card::getCardValue() {
 		return 11;
 		break;
 	default:
-		return rank;
+		return _rank;
 		break;
 	}
 }
 
-void Card::print() {
-	switch (rank)
+void Card::print() const {
+	cout << "[";
+	switch (_rank)
 	{
 	case jack:
-		std::cout << "J";
+		cout << "J";
 		break;
 	case queen:
-		std::cout << "Q";
+		cout << "Q";
 		break;
 	case king:
-		std::cout << "K";
+		cout << "K";
 		break;
 	case ace:
-		std::cout << "A";
+		cout << "A";
 		break;
 	default:
-		std::cout << rank;
+		cout << _rank;
 		break;
 	}
 	_setmode(_fileno(stdout), _O_U16TEXT);
-	switch (suit)
+	switch (_suit)
 	{
 	case spade:
-		std::wcout << SPADE;
+		wcout << L"\u2660";
 		break;
 	case heart:
-		std::wcout << HEART;
+		wcout << L"\u2665";
 		break;
 	case diamond:
-		std::wcout << DIAMOND;
+		wcout << L"\u2666";
 		break;
 	case club:
-		std::wcout << CLUB;
+		wcout << L"\u2663";
 		break;
 	}
 	_setmode(_fileno(stdout), _O_TEXT);
+	cout << "]";
 }

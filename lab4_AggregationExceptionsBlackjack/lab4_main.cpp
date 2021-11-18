@@ -1,11 +1,17 @@
 ﻿#include <iostream>
+#include <algorithm>
+#include <vector>
 #include "Card.h"
 #include "Deck.h"
+#include "Player.h"
+#include "Game.h"
+#include "GameController.h"
+
+using std::string;
+using std::vector;
 
 int main() {
-	Deck x(1);
-	x.print();
-	std::cout << "\n";
-	x.getRandomCard().print();
+	auto gc = GameController();
+
 	return 0;
 }

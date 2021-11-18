@@ -1,12 +1,14 @@
 #include "Card.h"
 #include <vector>
 #pragma once
+
+using std::vector;
 class Deck
 {
 private:
-	std::vector<Card> deck;
+	vector<Card> _deck;
 public:
-	Deck(int numOfDecks);
-	void print();
-	Card getRandomCard();
+	Deck();
+	void shuffleCards();
+	//Card getRandomCard();
 };

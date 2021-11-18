@@ -1,10 +1,7 @@
 #include <iostream>
+#include "IPrintable.h"
 #pragma once
 
-#define SPADE L"\u2660"
-#define CLUB L"\u2663"
-#define HEART L"\u2665"
-#define DIAMOND L"\u2666"
 enum Suit {
 	spade,
 	club,
@@ -28,15 +25,16 @@ enum Rank {
 	ace
 };
 
-class Card
+class Card : public IPrintable
 {
 private:
-	int suit = -1;
-	int rank = -1;
-	int value = 0;
+	int _suit = -1;
+	int _rank = -1;
+	int _value = 0;
 	int getCardValue();
 public:
 	Card(int rank, int suit);
-	void print();
+	//TODO: The model is used for output. Don't do like this...
+	void print() const override;
 };
 
