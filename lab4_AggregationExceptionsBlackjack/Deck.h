@@ -1,8 +1,12 @@
-#include "Card.h"
-#include <vector>
 #pragma once
+#include <vector>
+#include "Card.h"
 
 using std::vector;
+using std::srand;
+using std::rand;
+using std::time;
+
 class Deck
 {
 private:
@@ -10,5 +14,5 @@ private:
 public:
 	Deck();
 	void shuffleCards();
-	//Card getRandomCard();
+	Card getRandomCard();
 };

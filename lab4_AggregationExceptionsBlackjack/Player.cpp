@@ -7,6 +7,14 @@ Player::Player(const string& name, int money) {
 	_money = money;
 }
 
+Player* Player::get() {
+	return this;
+}
+
+string Player::getName() const {
+	return _name;
+}
+
 vector<Card> Player::getHand() const {
 	return _hand;
 }
@@ -25,6 +33,10 @@ void Player::setStake(int stake) {
 
 void Player::addCard(Card card) {
 	_hand.push_back(card);
+}
+
+void Player::setHand(vector<Card> hand) {
+	_hand = hand;
 }
 
 void Player::clearHand() {

@@ -15,9 +15,9 @@ protected:
 	vector<Deck> _decks;
 public:
 	Game() {};
-	Player getPlayer() const;
+	Player* getPlayer();
 	void setPlayer(const string& name, int money = 0);
-	Player getDealer() const;
+	Player* getDealer();
 	void setDealer(const string& name, int money = 0);
 	vector<Deck> getDecks() const;
 	void setDecks(vector<Deck> decks);

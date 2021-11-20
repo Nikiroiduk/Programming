@@ -1,6 +1,7 @@
 #pragma once
 
-enum class Suit {
+enum Suit : int
+{
 	spade,
 	club,
 	heart,

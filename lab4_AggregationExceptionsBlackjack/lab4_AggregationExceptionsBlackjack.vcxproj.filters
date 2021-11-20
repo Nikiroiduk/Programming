@@ -65,9 +65,6 @@
     <ClInclude Include="Card.h">
       <Filter>Header Files\Exercise1\Model</Filter>
     </ClInclude>
-    <ClInclude Include="IPrintable.h">
-      <Filter>Header Files\Exercise1</Filter>
-    </ClInclude>
     <ClInclude Include="Deck.h">
       <Filter>Header Files\Exercise1\Model</Filter>
     </ClInclude>
@@ -82,6 +79,15 @@
     </ClInclude>
     <ClInclude Include="ConsoleView.h">
       <Filter>Header Files\Exercise1\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Suit.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Rank.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IComparable.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

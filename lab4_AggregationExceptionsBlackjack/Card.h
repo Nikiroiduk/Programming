@@ -1,31 +1,9 @@
-#include <iostream>
-#include "IPrintable.h"
 #pragma once
+#include <iostream>
+#include "Rank.h"
+#include "IComparable.h"
 
-enum Suit {
-	spade,
-	club,
-	heart,
-	diamond
-};
-
-enum Rank {
-	two = 2,
-	three,
-	four,
-	five,
-	six,
-	seven,
-	eight,
-	nine,
-	ten,
-	jack,
-	queen,
-	king,
-	ace
-};
-
-class Card : public IPrintable
+class Card : public IComparable<Card>
 {
 private:
 	int _suit = -1;
@@ -34,7 +12,8 @@ private:
 	int getCardValue();
 public:
 	Card(int rank, int suit);
-	//TODO: The model is used for output. Don't do like this...
-	void print() const override;
+	int getSuit();
+	int getRank();
+	bool operator==(const Card& card1) override;
 };
 
