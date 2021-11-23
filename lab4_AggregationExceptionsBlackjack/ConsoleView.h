@@ -24,7 +24,7 @@ public:
 	static string InputPlayerName();
 	static int InputPlayerMoney();
 	static int InputPlayerStake();
-
+	static void Print(const string& string);
 	static void PrintPlayerInfo(const Player& player);
 	static void PrintTable(Game& game);
 };

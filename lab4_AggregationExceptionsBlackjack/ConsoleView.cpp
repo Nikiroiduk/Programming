@@ -77,6 +77,12 @@ void ConsoleView::PrintTable(Game& game) {
 	printCard(player->getHand()[0]);
 	printCard(player->getHand()[1]);
 	cout << "\nDealer hand: ";
-	printCard(player->getHand()[0]);
-	printCard(player->getHand()[1]);
+	printCard(dealer->getHand()[0]);
+	//printCard(dealer->getHand()[1]);
+	cout << "[  ]";
+	//TODO: Logic of displaying the second card at the dealer
+}
+
+void ConsoleView::Print(const string& string) {
+	cout << "\n" << string << "\n";
 }

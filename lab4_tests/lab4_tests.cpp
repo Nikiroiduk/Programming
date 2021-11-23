@@ -16,12 +16,16 @@ namespace lab4tests
 		
 		TEST_METHOD(RandomCardGenerationTest)
 		{
+			bool flag = false;
 			auto deck = Deck();
 
-			Card card1 = deck.getRandomCard();
-			Card card2 = deck.getRandomCard();
+			for (int i = 0; i < 26; ++i) {
+				Card card1 = deck.getRandomCard();
+				Card card2 = deck.getRandomCard();
+				if (card1 == card2) flag = !flag;
+			}
 
-			Assert::IsFalse(card1 == card2);
+			Assert::IsFalse(flag);
 		}
 
 		TEST_METHOD(PlayerCreationTest)

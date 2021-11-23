@@ -1,16 +1,16 @@
 #include "Deck.h"
 
 Deck::Deck(){
-	shuffleCards();
 	srand(time(0));
+	newDeck();
 }
 
-void Deck::shuffleCards() {
-		for (int i = 0; i < 4; ++i) {
-			for (int j = 2; j < 15; ++j) {
-				_deck.push_back(Card(j, i));
-			}
+void Deck::newDeck() {
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 2; j < 15; ++j) {
+			_deck.push_back(Card(j, i));
 		}
+	}
 }
 
 Card Deck::getRandomCard() {

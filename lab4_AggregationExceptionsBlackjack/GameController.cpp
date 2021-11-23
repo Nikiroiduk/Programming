@@ -2,15 +2,14 @@
 #include "ConsoleView.h"
 
 GameController::GameController() {
+	srand(time(0));
 	_game = Game();
 	launch();
 }
 
 vector<Card> GameController::getRandomHand() {
-	//TODO: Fix random generator (this thing doesn't work)
 	auto result = vector<Card>();
 	for (int i = 0; i < 2; ++i) {
-		srand(i + time(0));	
 		auto tmp = vector<Card>();
 		for (auto item : _game.getDecks()) {
 			tmp.push_back(item.getRandomCard());
@@ -27,17 +26,17 @@ void GameController::launch() {
 	auto name = ConsoleView::InputPlayerName();
 	auto money = ConsoleView::InputPlayerMoney();
 
-
-	//TODO: Fix konstantin: (*(xxxxx))
 	_game.setPlayer(name, money);
 	auto player = _game.getPlayer();
-	(*(player)).setHand(getRandomHand());
+	player->setHand(getRandomHand());
 
 	_game.setDealer("Dealer", 1000);
 	auto dealer = _game.getDealer();
-	(*(dealer)).setHand(getRandomHand());
+	dealer->setHand(getRandomHand());
 
 	auto playerInfo = _game.getPlayer();
-	ConsoleView::PrintPlayerInfo((*(playerInfo)));
+	ConsoleView::PrintPlayerInfo(*playerInfo);
 	ConsoleView::PrintTable(_game);
+	ConsoleView::Print("That's all...");
+ 
 }

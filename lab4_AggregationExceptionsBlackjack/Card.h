@@ -1,7 +1,12 @@
 #pragma once
 #include <iostream>
+#include <io.h>
+#include <fcntl.h>
 #include "Rank.h"
+#include "Suit.h"
 #include "IComparable.h"
+
+using std::ostream;
 
 class Card : public IComparable<Card>
 {
@@ -15,5 +20,6 @@ public:
 	int getSuit();
 	int getRank();
 	bool operator==(const Card& card1) override;
+	//TODO: Тутачки что-то нужно придумать
+	friend ostream& operator<<(ostream& out, const Card& card) {};
 };
-

@@ -36,3 +36,47 @@ bool Card::operator==(const Card& card1) {
 		return true;
 	return false;
 };
+
+//ostream& Card::operator<<(ostream& out, const Card& card) {
+//	out << "[";
+//
+//	switch (card._rank)
+//	{
+//	case jack:
+//		out << "J";
+//		break;
+//	case queen:
+//		out << "Q";
+//		break;
+//	case king:
+//		out << "K";
+//		break;
+//	case ace:
+//		out << "A";
+//		break;
+//	default:
+//		out << _rank;
+//		break;
+//	}
+//	_setmode(_fileno(stdout), _O_U16TEXT);
+//	switch (_suit)
+//	{
+//	case spade:
+//		out << L"\u2660";
+//		break;
+//	case heart:
+//		out << L"\u2665";
+//		break;
+//	case diamond:
+//		out << L"\u2666";
+//		break;
+//	case club:
+//		out << L"\u2663";
+//		break;
+//	}
+//	_setmode(_fileno(stdout), _O_TEXT);
+//
+//	out << "]";
+//	
+//	return out;
+//}

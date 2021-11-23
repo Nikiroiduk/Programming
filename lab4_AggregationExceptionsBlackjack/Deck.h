@@ -11,8 +11,8 @@ class Deck
 {
 private:
 	vector<Card> _deck;
+	void newDeck();
 public:
 	Deck();
-	void shuffleCards();
 	Card getRandomCard();
 };
