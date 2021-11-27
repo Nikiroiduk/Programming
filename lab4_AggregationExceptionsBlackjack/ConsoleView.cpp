@@ -22,67 +22,85 @@ int ConsoleView::InputPlayerStake() {
 }
 
 void ConsoleView::PrintPlayerInfo(const Player& player) {
-	cout << "\nPlayer name: " << player.getName() << "\n";
-	cout << "Player money: " << player.getMoney() << "\n";
+	cout << "\nYour money: " << player.getMoney() << "\n";
 }
 
-void ConsoleView::printCard(Card& card) {
-	auto rank = card.getRank();
-	auto suit = card.getSuit();
+void ConsoleView::PrintTable(Game& game, bool& isGameOver, bool& isSplited) {
+	auto player = game.getPlayer();
+	auto dealer = game.getDealer();
+
+	auto playerHand = player->getHand();
+	auto dealerHand = dealer->getHand();
+
+	cout << "\nDealer hand: ";
+	cout << dealerHand[0];
+	if (isGameOver) {
+		for (int i = 1; i < dealerHand.capacity(); ++i) {
+			cout << dealerHand[i];
+		}
+	}
+	else {
+		cout << "[  ]";
+	}
+	cout << "\n" << player->getName() << " hand: ";
+	for (auto item : playerHand) {
+		cout << item;
+	}
+	if (isSplited) {
+		cout << " ";
+		for (auto item : player->getSecondHand()) {
+			cout << item;
+		}
+	}
+	//TODO: Logic of displaying the second card at the dealer
+}
+
+void ConsoleView::Print(const string& string) {
+	cout << string << "\n";
+}
+
+ostream& operator<<(ostream& out, const Card& card) {
+	auto rank = card._rank;
+	auto suit = card._suit;
+	string suits[] = { "\x03", "\x04", "\x05", "\x06" };
 
 	cout << "[";
 	switch (rank)
 	{
 	case jack:
-		cout << "J";
+		out << "J";
 		break;
 	case queen:
-		cout << "Q";
+		out << "Q";
 		break;
 	case king:
-		cout << "K";
+		out << "K";
 		break;
 	case ace:
-		cout << "A";
+		out << "A";
 		break;
 	default:
-		cout << rank;
+		out << rank;
 		break;
 	}
-	_setmode(_fileno(stdout), _O_U16TEXT);
-	switch (suit)
-	{
-	case spade:
-		wcout << L"\u2660";
-		break;
-	case heart:
-		wcout << L"\u2665";
-		break;
-	case diamond:
-		wcout << L"\u2666";
-		break;
-	case club:
-		wcout << L"\u2663";
-		break;
-	}
-	_setmode(_fileno(stdout), _O_TEXT);
-	cout << "]";
+	out << suits[static_cast<int>(card._suit)];
+	out << "]";
+	return out;
+};
+
+string ConsoleView::InputPlayerAnswer() {
+	string answer = "n";
+	cout << "Play again? (y/n): ";
+	cin >> answer;
+	return answer;
 }
 
-void ConsoleView::PrintTable(Game& game) {
-	auto player = game.getPlayer();
-	auto dealer = game.getDealer();
+int ConsoleView::InputGameAction(bool& state) {
+	auto answer = -1;
 
-	cout << "\n" << player->getName() << " hand: ";
-	printCard(player->getHand()[0]);
-	printCard(player->getHand()[1]);
-	cout << "\nDealer hand: ";
-	printCard(dealer->getHand()[0]);
-	//printCard(dealer->getHand()[1]);
-	cout << "[  ]";
-	//TODO: Logic of displaying the second card at the dealer
+	cout << (state ? "\n1. Hit\n2. Stand\n3. Split\n" : "\n1. Hit\n2. Stand\n");
+	cin >> answer;
+	return answer;
 }
 
-void ConsoleView::Print(const string& string) {
-	cout << "\n" << string << "\n";
-}
+

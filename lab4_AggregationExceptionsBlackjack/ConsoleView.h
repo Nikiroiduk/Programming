@@ -18,14 +18,14 @@ using std::wcout;
 
 class ConsoleView
 {
-private:
-	static void printCard(Card& card);
 public:
 	static string InputPlayerName();
 	static int InputPlayerMoney();
 	static int InputPlayerStake();
+	static string InputPlayerAnswer();
+	static int InputGameAction(bool& state);
 	static void Print(const string& string);
 	static void PrintPlayerInfo(const Player& player);
-	static void PrintTable(Game& game);
+	static void PrintTable(Game& game, bool& isGameOver, bool& isSplited);
 };
 
