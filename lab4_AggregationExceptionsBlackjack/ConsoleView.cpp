@@ -52,7 +52,6 @@ void ConsoleView::PrintTable(Game& game, bool& isGameOver, bool& isSplited) {
 			cout << item;
 		}
 	}
-	//TODO: Logic of displaying the second card at the dealer
 }
 
 void ConsoleView::Print(const string& string) {
