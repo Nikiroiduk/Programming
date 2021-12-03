@@ -1,11 +1,36 @@
 ﻿#include "GameController.h"
+#include "IFormattable.h"
+#include "Deck.h"
 
 void Exercise1() {
 	auto gc = GameController();
 }
 
-void Exercise2() {
+//void prettyPrint(const IFormattable& object) {
+//
+//}
+//
+//class adapterClass : public Deck, public IFormattable {
+//	std::string format() override {
+//
+//	}
+//};
+//
+//class adapterObject : public IFormattable {
+//public:
+//	adapterObject()
+//	{
+//
+//	}
+//	Deck t = Deck();
+//
+//	std::string format() override {
+//		//t.format();
+//	}
+//};
 
+void Exercise2() {
+	
 }
 
 int main() {

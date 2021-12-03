@@ -19,10 +19,11 @@ private:
 	//bool isBust(vector<Card> hand);
 	bool isSplitable();
 	int countPoints(vector<Card> hand);
+	void start();
+	void game();
+	bool splitedGame();
 public:
 	GameController();
 	void launch();
-	void start();
-	void game();
 };
 

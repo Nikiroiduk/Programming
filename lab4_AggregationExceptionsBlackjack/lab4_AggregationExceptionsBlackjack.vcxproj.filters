@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Exercise1\Controller">
       <UniqueIdentifier>{952b50be-4967-453f-a5b8-3405fbdead77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Exercise2">
+      <UniqueIdentifier>{cbc969c7-6101-4f22-948d-7c794b7b33c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{d7e01a2a-fa0b-4d9d-ac2d-5afa3f31b983}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab4_main.cpp">
@@ -88,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="IComparable.h">
       <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IFormattable.h">
+      <Filter>Header Files\Exercise2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

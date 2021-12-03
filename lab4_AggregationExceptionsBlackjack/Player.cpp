@@ -65,3 +65,9 @@ void Player::setSecondHand(vector<Card> hand) {
 void Player::clearHand() {
 	_hand.clear();
 }
+
+void Player::clearSecondHand() {
+	_secondHand.clear();
+}
+
+

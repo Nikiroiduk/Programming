@@ -25,7 +25,7 @@ void ConsoleView::PrintPlayerInfo(const Player& player) {
 	cout << "\nYour money: " << player.getMoney() << "\n";
 }
 
-void ConsoleView::PrintTable(Game& game, bool& isGameOver, bool& isSplited) {
+void ConsoleView::PrintTable(Game& game, bool& isGameOver) {
 	auto player = game.getPlayer();
 	auto dealer = game.getDealer();
 
@@ -46,46 +46,13 @@ void ConsoleView::PrintTable(Game& game, bool& isGameOver, bool& isSplited) {
 	for (auto item : playerHand) {
 		cout << item;
 	}
-	if (isSplited) {
-		cout << " ";
-		for (auto item : player->getSecondHand()) {
-			cout << item;
-		}
-	}
 }
 
 void ConsoleView::Print(const string& string) {
 	cout << string << "\n";
 }
 
-ostream& operator<<(ostream& out, const Card& card) {
-	auto rank = card._rank;
-	auto suit = card._suit;
-	string suits[] = { "\x03", "\x04", "\x05", "\x06" };
 
-	cout << "[";
-	switch (rank)
-	{
-	case jack:
-		out << "J";
-		break;
-	case queen:
-		out << "Q";
-		break;
-	case king:
-		out << "K";
-		break;
-	case ace:
-		out << "A";
-		break;
-	default:
-		out << rank;
-		break;
-	}
-	out << suits[static_cast<int>(card._suit)];
-	out << "]";
-	return out;
-};
 
 string ConsoleView::InputPlayerAnswer() {
 	string answer = "n";
@@ -100,6 +67,34 @@ int ConsoleView::InputGameAction(bool& state) {
 	cout << (state ? "\n1. Hit\n2. Stand\n3. Split\n" : "\n1. Hit\n2. Stand\n");
 	cin >> answer;
 	return answer;
+}
+
+void ConsoleView::PrintSplitedTable(Game& game, bool& isGameOver) {
+	auto player = game.getPlayer();
+	auto dealer = game.getDealer();
+
+	auto playerHand = player->getHand();
+	auto playerSecondHand = player->getSecondHand();
+	auto dealerHand = dealer->getHand();
+
+	cout << "\nDealer hand: ";
+	cout << dealerHand[0];
+	if (isGameOver) {
+		for (int i = 1; i < dealerHand.capacity(); ++i) {
+			cout << dealerHand[i];
+		}
+	}
+	else {
+		cout << "[  ]";
+	}
+	cout << "\n" << player->getName() << " hand: ";
+	for (auto item : playerHand) {
+		cout << item;
+	}
+	cout << "  ";
+	for (auto item : playerSecondHand) {
+		cout << item;
+	}
 }
 
 

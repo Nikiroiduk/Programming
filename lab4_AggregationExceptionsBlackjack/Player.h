@@ -26,6 +26,7 @@ public:
 	int getStake() const;
 	Card getCard();
 	void clearHand();
+	void clearSecondHand();
 	void addCard(Card card);
 	void addSecondCard(Card card);
 	void addMoney(int money);

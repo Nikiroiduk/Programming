@@ -154,6 +154,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="IComparable.h" />
+    <ClInclude Include="IFormattable.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Rank.h" />
     <ClInclude Include="Suit.h" />

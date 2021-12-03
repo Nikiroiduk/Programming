@@ -11,8 +11,6 @@ GameController::GameController() {
 vector<Card> GameController::getRandomHand() {
 	auto result = vector<Card>();
 	for (int i = 0; i < 2; ++i) {
-		//Test [J][J]
-		//result.push_back(Card(11, 2 + i));
 		result.push_back(getRandomCard());
 	}
 	return result;
@@ -38,17 +36,8 @@ void GameController::launch() {
 
 	_game.setDecks(vector<Deck>(3));
 	_game.setPlayer(name, money);
-	//auto player = _game.getPlayer();
-	//player->setHand(getRandomHand());
 
 	_game.setDealer("Dealer", 0);
-	//auto dealer = _game.getDealer();
-	//dealer->setHand(getRandomHand());
-
-	//auto playerInfo = _game.getPlayer();
-	//ConsoleView::PrintPlayerInfo(*playerInfo);
-	//ConsoleView::PrintTable(_game);
-	//ConsoleView::Print("That's all...");
 	start();
 }
 
@@ -72,6 +61,7 @@ void GameController::start() {
 		player->setStake(stake);
 
 		player->setHand(getRandomHand());
+		player->clearSecondHand();
 		dealer->setHand(getRandomHand());
 
 		game();
@@ -86,18 +76,17 @@ void GameController::start() {
 	}
 }
 
-//TODO: Split logic
+
 void GameController::game() {
 	auto gameOver = false;
 	auto answer = -1;
 	auto player = _game.getPlayer();
 	auto dealer = _game.getDealer();
 	bool isSplit = isSplitable();
-	auto isSplited = false;
 	auto pts = 0;
 
 	while (!gameOver) {	
-		ConsoleView::PrintTable(_game, gameOver, isSplited);
+		ConsoleView::PrintTable(_game, gameOver);
 		answer = ConsoleView::InputGameAction(isSplit);
 		switch (answer)
 		{
@@ -109,7 +98,7 @@ void GameController::game() {
 			}
 			catch (exception exc) {
 				gameOver = true;
-				ConsoleView::PrintTable(_game, gameOver, isSplited);
+				ConsoleView::PrintTable(_game, gameOver);
 				ConsoleView::Print("\nIt's bust, you lost " + to_string(player->getStake()) + "!");
 			}
 			break;
@@ -121,7 +110,7 @@ void GameController::game() {
 			}
 
 			gameOver = true;
-			ConsoleView::PrintTable(_game, gameOver, isSplited);
+			ConsoleView::PrintTable(_game, gameOver);
 
 			if (pts < countPoints(player->getHand()) || pts > 21) {
 				player->addMoney(player->getStake() * 2);
@@ -136,20 +125,153 @@ void GameController::game() {
 			}
 			break;
 		case 3:
-			isSplited = true;
-			if (isSplit) {
-				Card tmp = player->getCard();
-				player->addSecondCard(tmp);
-				player->addSecondCard(getRandomCard());
-				player->addCard(getRandomCard());
+			if (isSplit && player->getMoney() >= player->getStake() * 2) {
+				if (splitedGame()) gameOver = true;
 			}
 			else {
 				ConsoleView::Print("Mmmm?!");
 			}
 			break;
+		default:
+			continue;
+			break;
 		}
 		isSplit = false;
 	}
+}
+
+bool GameController::splitedGame() {
+	bool firstHandGameOver = false;
+	bool secondHandGameOver = false;
+	int firstHandState = -1;
+	int secondHandState = -1;
+	int pts = 0;
+	bool isSplit = false;
+	bool fls = false;
+	auto player = _game.getPlayer();
+	auto dealer = _game.getDealer();
+	auto answer = -1;
+
+	Card tmp = player->getCard();
+	player->addSecondCard(tmp);
+	player->addSecondCard(getRandomCard());
+	player->addCard(getRandomCard());
+	player->setStake(player->getStake());
+
+	while (!firstHandGameOver){
+		ConsoleView::PrintSplitedTable(_game, fls);
+		answer = ConsoleView::InputGameAction(isSplit);
+		switch (answer)
+		{
+		case 1:
+			player->addCard(getRandomCard());
+			try {
+				if (countPoints(player->getHand()) > 21)
+					throw exception("Bust");
+			}
+			catch (exception exc) {
+				firstHandGameOver = true;
+				ConsoleView::PrintSplitedTable(_game, fls);
+				ConsoleView::Print("\nIt's bust, you lost " + to_string(player->getStake()) + "!");
+			}
+			break;
+		case 2:
+			firstHandGameOver = true;
+			pts = countPoints(dealer->getHand());
+			while (pts <= 16) {
+				dealer->addCard(getRandomCard());
+				pts = countPoints(dealer->getHand());
+			}
+
+			if (pts < countPoints(player->getHand()) || pts > 21) {
+				firstHandState = 1;
+				player->addMoney(player->getStake() * 2);
+			}
+			else if (pts == countPoints(player->getHand())) {
+				firstHandState = 2;
+				player->addMoney(player->getStake());
+			}
+			else {
+				firstHandState = 0;
+			}
+			break;
+		default:
+			continue;
+			break;
+		}
+	}
+	while (!secondHandGameOver) {
+		ConsoleView::PrintSplitedTable(_game, fls);
+		answer = ConsoleView::InputGameAction(isSplit);
+		switch (answer)
+		{
+		case 1:
+			player->addSecondCard(getRandomCard());
+			try {
+				if (countPoints(player->getSecondHand()) > 21)
+					throw exception("Bust");
+			}
+			catch (exception exc) {
+				secondHandGameOver = true;
+				ConsoleView::PrintSplitedTable(_game, fls);
+				ConsoleView::Print("\nIt's bust, you lost " + to_string(player->getStake()) + "!");
+			}
+			break;
+		case 2:
+			secondHandGameOver = true;
+
+			pts = countPoints(dealer->getHand());
+			while (pts <= 16) {
+				dealer->addCard(getRandomCard());
+				pts = countPoints(dealer->getHand());
+			}
+
+			if (pts < countPoints(player->getSecondHand()) || pts > 21) {
+				secondHandState = 1;
+				player->addMoney(player->getStake() * 2);
+			}
+			else if (pts == countPoints(player->getSecondHand())) {
+				secondHandState = 2;
+				player->addMoney(player->getStake());
+			}
+			else {
+				secondHandState = 0;
+			}
+			break;
+		default:
+			continue;
+			break;
+		}
+	}
+
+	ConsoleView::PrintSplitedTable(_game, firstHandGameOver);
+	switch (firstHandState)
+	{
+	case 0:
+		ConsoleView::Print("You first hand lose!");
+		break;
+	case 1:
+		ConsoleView::Print("Congrats! You first hand win and get " + to_string(player->getStake() * 2));
+		break;
+	case 2:
+		ConsoleView::Print("First hand draw!");
+		break;
+	}
+
+	switch (secondHandState)
+	{
+	case 0:
+		ConsoleView::Print("You second hand lose!");
+		break;
+	case 1:
+		ConsoleView::Print("Congrats! You second hand win and get " + to_string(player->getStake() * 2));
+		break;
+	case 2:
+		ConsoleView::Print("Second hand draw!");
+		break;
+	}
+
+	return true;
 }
 
 int GameController::countPoints(vector<Card> hand) {
