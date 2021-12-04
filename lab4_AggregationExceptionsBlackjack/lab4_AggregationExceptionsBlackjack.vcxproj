@@ -142,6 +142,8 @@
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="ConsoleView.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="DeckClassAdapter.cpp" />
+    <ClCompile Include="DeckObjectAdapter.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="lab4_main.cpp" />
@@ -151,6 +153,8 @@
     <ClInclude Include="Card.h" />
     <ClInclude Include="ConsoleView.h" />
     <ClInclude Include="Deck.h" />
+    <ClInclude Include="DeckClassAdapter.h" />
+    <ClInclude Include="DeckObjectAdapter.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="IComparable.h" />

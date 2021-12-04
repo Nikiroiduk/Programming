@@ -245,10 +245,11 @@ bool GameController::splitedGame() {
 	}
 
 	ConsoleView::PrintSplitedTable(_game, firstHandGameOver);
+	ConsoleView::Print("\n");
 	switch (firstHandState)
 	{
 	case 0:
-		ConsoleView::Print("You first hand lose!");
+		ConsoleView::Print("Your first hand lose!");
 		break;
 	case 1:
 		ConsoleView::Print("Congrats! You first hand win and get " + to_string(player->getStake() * 2));
@@ -261,7 +262,7 @@ bool GameController::splitedGame() {
 	switch (secondHandState)
 	{
 	case 0:
-		ConsoleView::Print("You second hand lose!");
+		ConsoleView::Print("Your second hand lose!");
 		break;
 	case 1:
 		ConsoleView::Print("Congrats! You second hand win and get " + to_string(player->getStake() * 2));

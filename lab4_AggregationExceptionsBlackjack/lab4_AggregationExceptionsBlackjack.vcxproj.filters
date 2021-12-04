@@ -66,6 +66,12 @@
     <ClCompile Include="ConsoleView.cpp">
       <Filter>Source Files\Exercise1\View</Filter>
     </ClCompile>
+    <ClCompile Include="DeckClassAdapter.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="DeckObjectAdapter.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h">
@@ -96,6 +102,12 @@
       <Filter>Header Files\Exercise1\Model</Filter>
     </ClInclude>
     <ClInclude Include="IFormattable.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="DeckClassAdapter.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="DeckObjectAdapter.h">
       <Filter>Header Files\Exercise2</Filter>
     </ClInclude>
   </ItemGroup>

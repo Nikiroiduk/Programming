@@ -1,36 +1,35 @@
 ﻿#include "GameController.h"
 #include "IFormattable.h"
-#include "Deck.h"
+#include "DeckClassAdapter.h"
+#include "DeckObjectAdapter.h"
+
+using std::string;
+using std::cout;
+using std::to_string;
 
 void Exercise1() {
 	auto gc = GameController();
 }
 
-//void prettyPrint(const IFormattable& object) {
-//
-//}
-//
-//class adapterClass : public Deck, public IFormattable {
-//	std::string format() override {
-//
-//	}
-//};
-//
-//class adapterObject : public IFormattable {
-//public:
-//	adapterObject()
-//	{
-//
-//	}
-//	Deck t = Deck();
-//
-//	std::string format() override {
-//		//t.format();
-//	}
-//};
+void prettyPrint(const IFormattable& object) {
+	
+}
 
 void Exercise2() {
-	
+	auto* adaptC = new DeckClassAdapter();
+	cout << adaptC->format();
+
+	auto* adaptO = new DeckObjectAdapter();
+	cout << adaptO->format();
+
+	//IFormattable* dca = dynamic_cast<DeckClassAdapter*>(adaptC);
+	//prettyPrint(*dca);
+
+	//IFormattable* doa = dynamic_cast<DeckObjectAdapter*>(adaptO);
+	//prettyPrint(*doa);
+
+	delete adaptC;
+	delete adaptO;
 }
 
 int main() {
@@ -57,7 +56,7 @@ int main() {
 	Тип игры:	  Базовый
 	Доп. правила: Сплит
 	*/
-	Exercise1();
+	//Exercise1();
 
 	/*
 	Реализуйте паттерн GOF «Адаптер» в обоих видах (адаптер класса и адаптер объекта) 

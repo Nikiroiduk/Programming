@@ -9,7 +9,7 @@ using std::time;
 
 class Deck
 {
-private:
+protected:
 	vector<Card> _deck;
 	void newDeck();
 public:
