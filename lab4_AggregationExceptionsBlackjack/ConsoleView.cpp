@@ -35,8 +35,8 @@ void ConsoleView::PrintTable(Game& game, bool& isGameOver) {
 	cout << "\nDealer hand: ";
 	cout << dealerHand[0];
 	if (isGameOver) {
-		for (int i = 1; i < dealerHand.capacity(); ++i) {
-			cout << dealerHand[i];
+		for (auto item : dealerHand) {
+			cout << item;
 		}
 	}
 	else {
@@ -80,8 +80,8 @@ void ConsoleView::PrintSplitedTable(Game& game, bool& isGameOver) {
 	cout << "\nDealer hand: ";
 	cout << dealerHand[0];
 	if (isGameOver) {
-		for (int i = 1; i < dealerHand.capacity(); ++i) {
-			cout << dealerHand[i];
+		for (auto item : dealerHand) {
+			cout << item;
 		}
 	}
 	else {

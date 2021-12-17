@@ -16,7 +16,6 @@ private:
 	int _minStake;
 	vector<Card> getRandomHand();
 	Card getRandomCard();
-	//bool isBust(vector<Card> hand);
 	bool isSplitable();
 	int countPoints(vector<Card> hand);
 	void start();

@@ -10,6 +10,7 @@
 #include "Suit.h"
 #include "Rank.h"
 #include <stdexcept>
+#include <algorithm>
 
 using std::string;
 using std::vector;
@@ -17,6 +18,7 @@ using std::cout;
 using std::cin;
 using std::wcout;
 using std::invalid_argument;
+using std::for_each;
 
 class ConsoleView
 {

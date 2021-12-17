@@ -139,7 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="BookFinder.cpp" />
+    <ClCompile Include="BookSorter.cpp" />
+    <ClCompile Include="Cache.cpp" />
+    <ClCompile Include="DataManager.cpp" />
     <ClCompile Include="lab5_main.cpp" />
+    <ClCompile Include="StringFinder.cpp" />
+    <ClCompile Include="TextAnalyzer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Book.h" />
+    <ClInclude Include="Cache.h" />
+    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="TextAnalyzer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bigFile(10k_Lines).txt" />
+    <Text Include="smallFile(200_Lines).txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
