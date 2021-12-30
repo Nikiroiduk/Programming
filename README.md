@@ -9,3 +9,7 @@
 * [Lab 5](https://github.com/Nikiroiduk/Programming/tree/master/lab5_TemplatesSTL) - Templates, STL
   
 </details>
+
+<details><summary>Spring semester 2022</summary>
+  
+</details>
