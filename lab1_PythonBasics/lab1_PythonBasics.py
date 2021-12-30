@@ -1,57 +1,32 @@
-def reverse(string):
-    return string[::-1]
-print(reverse("test"))
-print(reverse("world"))
-print(reverse("two worlds or even more"))
+#---------------------------------------------------------------------
+# Напишите скрипт, который преобразует введенное с клавиатуры 
+# вещественное число в денежный формат. Например, число 12,5 должно 
+# быть преобразовано к виду «12 руб. 50 коп.». В случае ввода 
+# отрицательного числа выдайте сообщение «Некорректный формат!»
+# путем обработки исключения в коде.
+#---------------------------------------------------------------------
+def Exercise1:
+    money = input("Enter your number: ")
+    try:
+        if float(money) < 0: raise ValueError('Money should be a positive')
+        print("{} руб. {} коп.".format(money.split(".")[0], money.split(".")[1].ljust(2, '0')))
+    except ValueError as e:
+        print(e)
+        Exercise1()
 
 
-def square_sum(numbers):
-    return sum([num**2 for num in numbers])
-arr = [1, 2, 2]
-arr1 = [2, 10, -3]
-print(square_sum(arr))
-print(square_sum(arr1))
+#---------------------------------------------------------------------
+# Написать скрипт, который выводит на экран «True», если элементы 
+# программно задаваемого списка представляют собой возрастающую 
+# последовательность, иначе – «False».
+#---------------------------------------------------------------------
+def Exercise2:
+    list = {1, 2, 3, 4, 5, 6, 7, 8}
+    wrongList = {6, 2, 5, 4, 5, 6, 7, 8}
 
-
-
-def find_short(s):
-    return len(sorted(s.split(" "), key = len)[0])
-
-print(find_short("mmm nice python tt"))
-print(find_short("mb some more tests"))
-print(find_short("ahhh string never be empty"))
-print(find_short("butStringCanBeVeryLong"))
-
-def find_smallest_int(arr):
-    return min(arr)
-
-arr = {1, 2, 3, 4, -19}
-print(find_smallest_int(arr))
-
-
-def add_binary(a,b):
-    return bin(a+b)[2:]
-
-print(add_binary(1,1))
-print(add_binary(0,1))
-print(add_binary(1,0))
+def isAscending:
 
 
 
-def meh(string):
-    counts = {}
-    for c in string.lower():
-        if c in counts:
-            counts[c] += 1
-            return bool(0)
-        else:
-            counts[c] = 1
-    return bool(1)
-
-print(meh('PythonforallPythonMustforall'))
-print(meh('tutorialspointfordeveloper'))
-print(meh('AABBCC'))
-print(meh('ABC'))
-print(meh("Dermatoglyphics"))
-print(meh(""))
-print(meh("moOse"))
+Exercise1()
+Exercise2()
