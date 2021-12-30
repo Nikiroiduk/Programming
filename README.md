@@ -11,5 +11,7 @@
 </details>
 
 <details><summary>Spring semester 2022</summary>
+
+* [Lab 1](https://github.com/Nikiroiduk/Programming/tree/master/lab1_PythonBasics) - Python basics
   
 </details>
