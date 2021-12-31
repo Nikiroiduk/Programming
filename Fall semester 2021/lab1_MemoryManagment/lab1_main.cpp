@@ -1,6 +1,6 @@
-﻿#include <iostream>;
-#include <cmath>;
-#include <cstring>;
+﻿#include <iostream>
+#include <cmath>
+#include <cstring>
 
 void print1DArray(int* array, int length) {
 	std::cout << "\n";
