@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Exercise1">
+      <UniqueIdentifier>{e5d5c9df-2395-4113-9353-905a5fe6d68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise1\Model">
+      <UniqueIdentifier>{2c353578-2d13-458d-b259-9e65ac0e1f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise1\View">
+      <UniqueIdentifier>{5f8cc1d7-0846-491c-8ea6-a34437f24f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise1\Controller">
+      <UniqueIdentifier>{d3512abe-c827-4a8f-bbf4-173510db3474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1">
+      <UniqueIdentifier>{bae1d3e7-89b8-4025-bcfc-dbce6f17bc56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\Model">
+      <UniqueIdentifier>{dc0f56a5-9ae5-4068-987f-6545d9f39299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\View">
+      <UniqueIdentifier>{aa836f37-d0d4-45f2-9f17-b570111a6a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1\Controller">
+      <UniqueIdentifier>{952b50be-4967-453f-a5b8-3405fbdead77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exercise2">
+      <UniqueIdentifier>{cbc969c7-6101-4f22-948d-7c794b7b33c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{d7e01a2a-fa0b-4d9d-ac2d-5afa3f31b983}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lab4_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Exercise1\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Source Files\Exercise1\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleView.cpp">
+      <Filter>Source Files\Exercise1\View</Filter>
+    </ClCompile>
+    <ClCompile Include="DeckClassAdapter.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="DeckObjectAdapter.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Header Files\Exercise1\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleView.h">
+      <Filter>Header Files\Exercise1\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Suit.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Rank.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IComparable.h">
+      <Filter>Header Files\Exercise1\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IFormattable.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="DeckClassAdapter.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+    <ClInclude Include="DeckObjectAdapter.h">
+      <Filter>Header Files\Exercise2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
