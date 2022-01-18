@@ -13,7 +13,7 @@
 <details><summary>Spring semester 2022</summary>
 
 * [Lab 1](https://github.com/Nikiroiduk/Programming/tree/master/Spring%20semester%202022/lab1_PythonBasics) - Python basics
-* [Lab 2](https://github.com/Nikiroiduk/Programming/tree/master/Spring%20semester%202022/lab2_PythonFiles&OS) - Python files and OS
+* [Lab 2](https://github.com/Nikiroiduk/Programming/tree/master/Spring%20semester%202022/lab2_PythonFilesAndOS) - Python files and OS
 * [Lab 3](https://github.com/Nikiroiduk/Programming/tree/master/Spring%20semester%202022/lab3_PythonOOP&GUI) - Python OOP and GUI
 * [Lab 4](https://github.com/Nikiroiduk/Programming/tree/master/Spring%20semester%202022/lab4_PythonLibraries) - Python libraries
   
