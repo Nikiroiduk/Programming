@@ -1,0 +1,40 @@
+
+OK button is pressed 2022-03-27 16:35:01.821920
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:35:08.545031
+Log data was displayed 2022-03-27 16:36:12.368426
+OK button is pressed 2022-03-27 16:35:01.821920
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:35:08.545031
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened and succesfully apended to log file 2022-03-27 16:36:20.752091
+An error has occurred while reading file 2022-03-27 16:41:07.911769
+An error has occurred while reading file 2022-03-27 16:41:15.097776
+An error has occurred while reading file 2022-03-27 16:41:20.364248
+An error has occurred 2022-03-27 16:41:44.768617
+An error has occurred 2022-03-27 16:41:53.513849
+An error has occurred 2022-03-27 16:42:01.156124
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened 2022-03-27 16:42:40.713375
+An error has occurred while reading file 2022-03-27 16:44:04.451796
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened 2022-03-27 16:44:31.958756
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:44:37.652402
+An error has occurred while reading file 2022-03-27 16:44:43.111070
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was saved 2022-03-27 16:44:50.596553
+An error has occurred 2022-03-27 16:44:58.766903
+OK button is pressed 2022-03-27 16:35:01.821920
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:35:08.545031
+Log data was displayed 2022-03-27 16:36:12.368426
+OK button is pressed 2022-03-27 16:35:01.821920
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:35:08.545031
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened and succesfully apended to log file 2022-03-27 16:36:20.752091
+An error has occurred while reading file 2022-03-27 16:41:07.911769
+An error has occurred while reading file 2022-03-27 16:41:15.097776
+An error has occurred while reading file 2022-03-27 16:41:20.364248
+An error has occurred 2022-03-27 16:41:44.768617
+An error has occurred 2022-03-27 16:41:53.513849
+An error has occurred 2022-03-27 16:42:01.156124
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened 2022-03-27 16:42:40.713375
+An error has occurred while reading file 2022-03-27 16:44:04.451796
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened 2022-03-27 16:44:31.958756
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:44:37.652402
+An error has occurred while reading file 2022-03-27 16:44:43.111070
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/log.txt was oppened and succesfully apended to log file 2022-03-27 16:45:01.614137
+G:/Programming/Programming/SpringSemester2022/lab3_PythonOOP&GUI/script.log was oppened 2022-03-27 16:45:16.886667
+Log data was displayed 2022-03-27 16:45:21.146048
