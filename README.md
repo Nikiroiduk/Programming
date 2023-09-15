@@ -21,8 +21,8 @@
 
 <details><summary>Fall semester 2023</summary>
 
-* [Lab 1]() - Creating Java programs
-* [Lab 2]() - Creating classes
+* [Lab 1](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab1_CreatingJavaPrograms/src) - Creating Java programs
+* [Lab 2](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab2_CreatingClasses) - Creating classes
 * [Lab 3]() - Graphics in Java. Package java.awt, javax.swing
 * [Lab 4]() - Java event handling
 * [Lab 5]() - Package java.io, object serialization
