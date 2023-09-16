@@ -9,6 +9,10 @@ public class Rectangle {
     private int x2 = 0;
     private int y2 = 0;
 
+    public int speedX = 1;
+    public int speedY = 1;
+
+    
     public void setX1(int x1) {
         this.x1 = x1;
     }
@@ -16,6 +20,7 @@ public class Rectangle {
     public int getX1() {
         return x1;
     }
+
 
     public void setY1(int y1) {
         this.y1 = y1;
@@ -25,6 +30,7 @@ public class Rectangle {
         return y1;
     }
 
+
     public void setX2(int x2) {
         this.x2 = x2;
     }
@@ -32,6 +38,7 @@ public class Rectangle {
     public int getX2() {
         return x2;
     }
+
 
     public void setY2(int y2) {
         this.y2 = y2;
@@ -66,6 +73,13 @@ public class Rectangle {
 
     public String rect_print() {
         return String.format("(%d, %d), (%d, %d)", x1, y1, x2, y2);
+    }
+
+    public void move(){
+        x1 += speedX;
+        x2 += speedX;
+        y1 += speedY;
+        y2 += speedY;
     }
 
     public void move(int dx, int dy) {
