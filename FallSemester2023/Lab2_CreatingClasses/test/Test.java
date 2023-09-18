@@ -23,6 +23,7 @@ public class Test {
         System.out.println("rect3: " + rect3.rect_print());
 
         rect2.union(rect3);
+        
         System.out.println("rect2 union rect3:");
         System.out.println(rect2.rect_print());
 
