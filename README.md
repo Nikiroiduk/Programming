@@ -26,7 +26,7 @@
 * [Lab 3](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab3_GraphicsInJava) - Graphics in Java. Package java.awt, javax.swing
 * [Lab 4](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab4_JavaEventHandling) - Java event handling
 * [Lab 5](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab5_ObjectSerialization) - Package java.io, object serialization
-* [Lab 6]() - Package javax.swing, GUI
+* [Lab 6](https://github.com/Nikiroiduk/Programming/tree/master/FallSemester2023/Lab6_JavaxSwingGUI) - Package javax.swing, GUI
 * [Lab 7]() - JDBC
   
 </details>

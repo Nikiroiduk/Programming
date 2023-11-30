@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 import java.io.*;
-//import java.util.*;
 
 import models.Rectangle;
 import models.DrawableRect;
@@ -110,7 +109,7 @@ public class Ex2 extends JFrame implements ActionListener {
             str.close();
             gp.components.addAll((List<Rectangle>)components);
             gp.repaint();
-            System.out.println("Object serialized in " + (System.currentTimeMillis() - time) + " ms.");
+            System.out.println("Object deserialized in " + (System.currentTimeMillis() - time) + " ms.");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
