@@ -10,7 +10,6 @@
 * То же самое проделать для операции считывания данных из файла.
 */
 
-package src;
 import java.io.*;
 import java.util.*;
 
