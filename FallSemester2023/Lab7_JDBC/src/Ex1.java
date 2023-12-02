@@ -1,15 +1,20 @@
-package src;
+/*
+ * Создать БД 
+ * Магазин продажи билетов на автобусные рейсы. Магазин должен 
+ * содержать минимум 5 таблиц.
+ */
+
 
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
-import src.models.Booking;
-import src.models.Bus;
-import src.models.Route;
-import src.models.Schedule;
-import src.models.Ticket;
-import src.models.TicketDTO;
+import models.Booking;
+import models.Bus;
+import models.Route;
+import models.Schedule;
+import models.Ticket;
+import models.TicketDTO;
 
 public class Ex1 {
     private static final String URL = "jdbc:mysql://localhost/bus_tickets";
@@ -140,11 +145,9 @@ public class Ex1 {
 
                 System.out.println("Where are you coming from?: ");
                 var startLocation = scanner.nextLine();
-                // startLocation = "Delhi";
                 System.out.println("Where you go?: ");
                 var endLocation = scanner.nextLine();
-                // endLocation = "Bogotá";
-
+                                                 
                 String checkAvaliavleTickets = "SELECT Tickets.*, Schedules.DepartureTime, Schedules.ArrivalTime, Routes.Distance FROM Tickets JOIN Schedules ON Tickets.ScheduleID = Schedules.ScheduleID JOIN Routes ON Schedules.RouteID = Routes.RouteID WHERE Routes.StartLocation = ? AND Routes.EndLocation = ? AND Tickets.Status = 'available';";
                 PreparedStatement checkStmt = conn.prepareStatement(checkAvaliavleTickets);
                 checkStmt.setString(1, startLocation);
@@ -161,8 +164,6 @@ public class Ex1 {
                     LocalDateTime departureTime = rs.getTimestamp("DepartureTime").toLocalDateTime();
                     LocalDateTime arrivalTime = rs.getTimestamp("ArrivalTime").toLocalDateTime();
                     double distance = rs.getDouble("Distance");
-                    // System.out.println(rs.getTimestamp("DepartureTime"));
-                    // System.out.println(rs.getTimestamp("ArrivalTime"));
 
                     avaliableTickets.add(new TicketDTO(ticketID, scheduleID, seatNumber, price, status, departureTime,
                             arrivalTime, distance));
